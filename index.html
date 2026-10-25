@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kate Massage — massage services in the USA.">
+<title>Kate Massage | Relax, Restore, Renew</title>
+<style>
+:root{--ink:#34242d;--muted:#796771;--pink:#c66b91;--dark:#994568;--blush:#fff3f7;--gold:#b99a5a;--line:#f0dfe6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fffdfb;font-family:Arial,sans-serif;line-height:1.65}
+.top{height:4px;background:linear-gradient(90deg,var(--pink),#e9cba0,var(--pink))}
+header{position:sticky;top:0;background:#fffdfbf2;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:2}
+nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}.mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--dark);font:italic 23px Georgia}
+.brand b{font:23px Georgia,serif;font-weight:400}.brand small{display:block;font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+nav .links{display:flex;gap:23px;align-items:center}nav .links a{font-size:13px;text-decoration:none;color:var(--muted)}
+.btn{display:inline-block;border:1px solid transparent;border-radius:30px;padding:12px 19px;background:var(--dark);color:white!important;text-decoration:none;font-size:13px;font-weight:bold;cursor:pointer}
+.btn.outline{background:white;color:var(--dark)!important;border-color:#d9a7bb}
+.hero{max-width:1120px;margin:auto;padding:60px 22px 75px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:10px;color:var(--dark);font-weight:bold}
+h1,h2,h3{font-family:Georgia,serif;font-weight:400;line-height:1.15}h1{font-size:clamp(43px,5.5vw,68px);letter-spacing:-1px;margin:18px 0}h1 em{color:var(--dark)}
+.lead{color:var(--muted);max-width:480px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}.note{font-size:11px;color:#927d87;margin-top:20px}
+.hero-image{min-height:455px;position:relative;background:linear-gradient(#38283212,#38283225),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85') center/cover;border-radius:48% 48% 14px 14px;box-shadow:0 18px 55px #5b2f431a}
+.label{position:absolute;bottom:-15px;left:-20px;background:white;border:1px solid var(--line);padding:17px 21px;border-radius:12px;box-shadow:0 10px 30px #5b2f4318}.label strong{display:block;font:19px Georgia}.label span{font-size:11px;color:var(--muted)}
+section.pad{padding:76px 22px}.inner{max-width:1060px;margin:auto}.head{text-align:center;max-width:650px;margin:0 auto 36px}.head h2,h2{font-size:clamp(32px,4vw,45px);margin:15px 0}.head p,.about p{color:var(--muted)}
+.services{background:var(--blush)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:27px;display:flex;flex-direction:column}.icon{width:43px;height:43px;border-radius:50%;background:#fff0f5;color:var(--dark);display:grid;place-items:center;font-size:22px}.card h3{font-size:24px;margin:18px 0 8px}.card p{color:var(--muted);font-size:13px;flex:1}.price-row{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;align-items:baseline}.price{font:30px Georgia;color:var(--dark)}.price-row small{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}.about-image{min-height:330px;border-radius:15px;background:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=85') center/cover;box-shadow:0 18px 55px #5b2f431a}
+.contact{background:#382832;color:white}.contact .head p{color:#d8c6cf}.contact .eyebrow{color:#e9cba0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.panel{padding:26px;border:1px solid #ffffff26;background:#ffffff0b;border-radius:15px}.panel h3{font-size:25px;margin:0}.panel>p{color:#d8c6cf;font-size:13px}.contact-list{display:grid;gap:10px}.contact-list a{display:flex;justify-content:space-between;gap:12px;padding:13px;background:#ffffff10;border-radius:8px;text-decoration:none;font-size:12px}.contact-list a span:last-child{color:#e9cba0}
+form{display:grid;gap:12px}label{font-size:11px;color:#e5d4dc}input,select,textarea{width:100%;margin-top:5px;padding:12px;border-radius:7px;border:1px solid #ffffff40;background:#fff;color:var(--ink);font:13px Arial}textarea{min-height:75px}form button{width:100%}.form-note{font-size:10px;color:#d8c6cf}
+footer{background:#2c2028;color:#bdaab4;padding:22px;font-size:10px}.foot{max-width:1060px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){nav{padding:12px 16px}.brand b{font-size:19px}.links a:not(.btn){display:none}.links{gap:8px!important}.links .btn{padding:10px 13px;font-size:11px}.hero{grid-template-columns:1fr;padding-top:40px;gap:35px}.hero-image{min-height:350px;margin-left:12px}.label{left:-10px}.cards{grid-template-columns:1fr}.about,.contact-grid{grid-template-columns:1fr;gap:25px}section.pad{padding:58px 18px}.about-image{min-height:260px}}
+</style>
+</head>
+<body>
+<div class="top"></div>
+<header><nav>
+<a class="brand" href="#home"><span class="mark">K</span><span><b>Kate Massage</b><small>Relax · Restore · Renew</small></span></a>
+<div class="links"><a href="#services">Services</a><a href="#about">Our Approach</a><a href="#contact">Contact</a><a class="btn" href="#contact">Request Appointment</a></div>
+</nav></header>
+<main>
+<section class="hero" id="home">
+<div><div class="eyebrow">Your moment of calm</div><h1>Make room for<br><em>well-being.</em></h1>
+<p class="lead">A thoughtful massage experience designed to help you slow down, unwind, and make time for yourself. Explore the services below and contact Kate to arrange an appointment in the USA.</p>
+<div class="actions"><a class="btn" href="#services">Explore Services ↗</a><a class="btn outline" href="sms:8653752664">Text Kate</a></div>
+<p class="note">A calm space to pause, reset, and focus on you.</p></div>
+<div class="hero-image" role="img" aria-label="Peaceful spa setting"><div class="label"><strong>Your time. Your comfort.</strong><span>Discover a more relaxing routine.</span></div></div>
+</section>
+<section class="pad services" id="services"><div class="inner"><div class="head"><div class="eyebrow">Massage menu</div><h2>Choose your moment of calm</h2><p>Explore the three massage services offered by Kate Massage.</p></div>
+<div class="cards">
+<article class="card"><div class="icon">✧</div><h3>Relaxation Massage</h3><p>A soothing massage experience intended to encourage relaxation and give you time to unwind.</p><div class="price-row"><span class="price">$80</span><small>Per session</small></div></article>
+<article class="card"><div class="icon">❋</div><h3>Swedish Massage</h3><p>A classic, gentle massage experience using flowing strokes to help you relax and unwind.</p><div class="price-row"><span class="price">$130</span><small>Per session</small></div></article>
+<article class="card"><div class="icon">✺</div><h3>Deep Tissue Massage</h3><p>A firmer massage option focused on areas of tension, with pressure discussed to suit your comfort.</p><div class="price-row"><span class="price">$180</span><small>Per session</small></div></article>
+<article class="card"><div class="icon">❀</div><h3>Hot Stone Massage</h3><p>A relaxing massage experience that incorporates warmed stones when appropriate and comfortable.</p><div class="price-row"><span class="price">$230</span><small>Per session</small></div></article>
+<article class="card"><div class="icon">❈</div><h3>Full Body Massage</h3><p>A full-body massage experience designed to help you set aside everyday stress and relax.</p><div class="price-row"><span class="price">$280</span><small>Per session</small></div></article>
+<article class="card"><div class="icon">✦</div><h3>Aromatherapy Massage</h3><p>A calming massage experience incorporating aromatic oils, subject to your preferences and sensitivities.</p><div class="price-row"><span class="price">$330</span><small>Per session</small></div></article>
+<article class="card"><div class="icon">❋</div><h3>Premium Signature Massage</h3><p>A longer, tailored relaxation experience planned around your preferences and comfort.</p><div class="price-row"><span class="price">$380</span><small>Per session</small></div></article>
+</div></div></section>
+<section class="pad" id="about"><div class="inner about"><div class="about-image" role="img" aria-label="Relaxing spa treatment room"></div><div><div class="eyebrow">The Kate Massage experience</div><h2>A little time just for you.</h2><p>At Kate Massage, the focus is on making space for comfort, calm, and personal care. Choose the service that suits what you are looking for, then get in touch to discuss your appointment.</p><p>Questions before booking? Contact Kate directly using one of the options below.</p><a class="btn outline" href="#contact">Get in Touch</a></div></div></section>
+<section class="pad contact" id="contact"><div class="inner"><div class="head"><div class="eyebrow">Contact & appointments</div><h2>Let’s arrange your visit.</h2><p>Use a contact option below or prepare an appointment request by text message.</p></div>
+<div class="contact-grid"><div class="panel"><h3>Contact Kate</h3><p>For appointments and service questions in the USA, reach out using your preferred contact method.</p><div class="contact-list">
+<a href="tel:8653752664"><span>Phone</span><span>865-375-2664 ↗</span></a>
+<a href="sms:8653752664"><span>Text message</span><span>Send a text ↗</span></a>
+<a href="https://zangi.com/" target="_blank" rel="noopener"><span>Zangi ID</span><span>1007166302</span></a>
+<a href="mailto:katemassagebooking@gmail.com"><span>iMessage / email</span><span>katemassagebooking@gmail.com ↗</span></a>
+<a href="https://signal.me/#p/+19795590880" target="_blank" rel="noopener"><span>Signal</span><span>979-559-0880 ↗</span></a>
+</div></div>
+<div class="panel"><h3>Request an appointment</h3><p>Fill this out and your phone will prepare a text to Kate. It will not send until you tap Send.</p>
+<form id="bookingForm"><label>Your name<input id="customerName" autocomplete="name" placeholder="Enter your name" required></label>
+<label>Preferred service<select id="service" required><option value="">Choose a massage service</option><option>Relaxation Massage — $80</option>
+<option>Swedish Massage — $130</option>
+<option>Deep Tissue Massage — $180</option>
+<option>Hot Stone Massage — $230</option>
+<option>Full Body Massage — $280</option>
+<option>Aromatherapy Massage — $330</option>
+<option>Premium Signature Massage — $380</option></select></label>
+<label>Preferred date or time<input id="appointmentTime" placeholder="e.g. Saturday afternoon"></label>
+<label>Message (optional)<textarea id="message" placeholder="Anything you'd like to ask?"></textarea></label>
+<button class="btn" type="submit">Prepare Text Request ↗</button><p class="form-note">This form opens your messaging app. It does not collect or store your information on this website.</p></form>
+</div></div></div></section>
+</main>
+<footer><div class="foot"><span>© <span id="year"></span> Kate Massage. All rights reserved.</span><span>Massage services · USA</span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('customerName').value.trim();const service=document.getElementById('service').value;const time=document.getElementById('appointmentTime').value.trim();const message=document.getElementById('message').value.trim();const body=`Hello Kate, my name is ${name}. I'd like to ask about an appointment for ${service}.${time?' Preferred date/time: '+time+'.':''}${message?' Message: '+message:''}`;window.location.href='sms:8653752664&body='+encodeURIComponent(body);});
+</script>
+</body></html>
