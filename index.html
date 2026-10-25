@@ -1,85 +1,591 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kate Massage — massage services in the USA.">
-<title>Kate Massage | Relax, Restore, Renew</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kate Massage offers luxury massage experiences and affordable relaxation options.">
+<title>Kate Massage | Luxury Spa</title>
+
 <style>
-:root{--ink:#34242d;--muted:#796771;--pink:#c66b91;--dark:#994568;--blush:#fff3f7;--gold:#b99a5a;--line:#f0dfe6}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fffdfb;font-family:Arial,sans-serif;line-height:1.65}
-.top{height:4px;background:linear-gradient(90deg,var(--pink),#e9cba0,var(--pink))}
-header{position:sticky;top:0;background:#fffdfbf2;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:2}
-nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none}.mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--dark);font:italic 23px Georgia}
-.brand b{font:23px Georgia,serif;font-weight:400}.brand small{display:block;font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
-nav .links{display:flex;gap:23px;align-items:center}nav .links a{font-size:13px;text-decoration:none;color:var(--muted)}
-.btn{display:inline-block;border:1px solid transparent;border-radius:30px;padding:12px 19px;background:var(--dark);color:white!important;text-decoration:none;font-size:13px;font-weight:bold;cursor:pointer}
-.btn.outline{background:white;color:var(--dark)!important;border-color:#d9a7bb}
-.hero{max-width:1120px;margin:auto;padding:60px 22px 75px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:10px;color:var(--dark);font-weight:bold}
-h1,h2,h3{font-family:Georgia,serif;font-weight:400;line-height:1.15}h1{font-size:clamp(43px,5.5vw,68px);letter-spacing:-1px;margin:18px 0}h1 em{color:var(--dark)}
-.lead{color:var(--muted);max-width:480px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}.note{font-size:11px;color:#927d87;margin-top:20px}
-.hero-image{min-height:455px;position:relative;background:linear-gradient(#38283212,#38283225),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85') center/cover;border-radius:48% 48% 14px 14px;box-shadow:0 18px 55px #5b2f431a}
-.label{position:absolute;bottom:-15px;left:-20px;background:white;border:1px solid var(--line);padding:17px 21px;border-radius:12px;box-shadow:0 10px 30px #5b2f4318}.label strong{display:block;font:19px Georgia}.label span{font-size:11px;color:var(--muted)}
-section.pad{padding:76px 22px}.inner{max-width:1060px;margin:auto}.head{text-align:center;max-width:650px;margin:0 auto 36px}.head h2,h2{font-size:clamp(32px,4vw,45px);margin:15px 0}.head p,.about p{color:var(--muted)}
-.services{background:var(--blush)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:27px;display:flex;flex-direction:column}.icon{width:43px;height:43px;border-radius:50%;background:#fff0f5;color:var(--dark);display:grid;place-items:center;font-size:22px}.card h3{font-size:24px;margin:18px 0 8px}.card p{color:var(--muted);font-size:13px;flex:1}.price-row{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;align-items:baseline}.price{font:30px Georgia;color:var(--dark)}.price-row small{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}.about-image{min-height:330px;border-radius:15px;background:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=85') center/cover;box-shadow:0 18px 55px #5b2f431a}
-.contact{background:#382832;color:white}.contact .head p{color:#d8c6cf}.contact .eyebrow{color:#e9cba0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.panel{padding:26px;border:1px solid #ffffff26;background:#ffffff0b;border-radius:15px}.panel h3{font-size:25px;margin:0}.panel>p{color:#d8c6cf;font-size:13px}.contact-list{display:grid;gap:10px}.contact-list a{display:flex;justify-content:space-between;gap:12px;padding:13px;background:#ffffff10;border-radius:8px;text-decoration:none;font-size:12px}.contact-list a span:last-child{color:#e9cba0}
-form{display:grid;gap:12px}label{font-size:11px;color:#e5d4dc}input,select,textarea{width:100%;margin-top:5px;padding:12px;border-radius:7px;border:1px solid #ffffff40;background:#fff;color:var(--ink);font:13px Arial}textarea{min-height:75px}form button{width:100%}.form-note{font-size:10px;color:#d8c6cf}
-footer{background:#2c2028;color:#bdaab4;padding:22px;font-size:10px}.foot{max-width:1060px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:760px){nav{padding:12px 16px}.brand b{font-size:19px}.links a:not(.btn){display:none}.links{gap:8px!important}.links .btn{padding:10px 13px;font-size:11px}.hero{grid-template-columns:1fr;padding-top:40px;gap:35px}.hero-image{min-height:350px;margin-left:12px}.label{left:-10px}.cards{grid-template-columns:1fr}.about,.contact-grid{grid-template-columns:1fr;gap:25px}section.pad{padding:58px 18px}.about-image{min-height:260px}}
+:root {
+  --dark: #202521;
+  --dark2: #303a33;
+  --white: #ffffff;
+  --cream: #f7f4ed;
+  --gold: #c6a66b;
+  --sage: #e9ede5;
+  --text: #303630;
+  --muted: #6d746d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+.topbar {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 11px;
+  font: 12px Arial, sans-serif;
+  letter-spacing: 3px;
+}
+
+header {
+  background: white;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #a18148;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font: 13px Arial, sans-serif;
+}
+
+.hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  padding: 65px 7%;
+  color: white;
+  background:
+    linear-gradient(100deg, rgba(25,31,27,.91), rgba(25,31,27,.55)),
+    url("E7449950-39EF-4625-8B96-4C083FD339B1.png")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font: 12px Arial, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(40px, 8vw, 66px);
+  font-weight: normal;
+  line-height: 1.08;
+  margin: 18px 0;
+}
+
+.hero p {
+  font: 16px/1.8 Arial, sans-serif;
+  color: #f4f2ec;
+  max-width: 530px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: #202521;
+  text-decoration: none;
+  border: none;
+  padding: 14px 23px;
+  margin-top: 15px;
+  cursor: pointer;
+  font: bold 13px Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+section {
+  padding: 65px 6%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font: 15px/1.8 Arial, sans-serif;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border: 1px solid #e5dfd3;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.featured {
+  border-top: 4px solid var(--gold);
+}
+
+.card-label {
+  color: #927344;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  font-size: 23px;
+  font-weight: normal;
+  margin: 12px 0 5px;
+}
+
+.price {
+  font: bold 28px Arial, sans-serif;
+  margin: 8px 0;
+  color: var(--dark);
+}
+
+.card p {
+  color: var(--muted);
+  font: 14px/1.8 Arial, sans-serif;
+  flex-grow: 1;
+}
+
+.card a {
+  color: #7e6338;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 5px;
+  align-self: flex-start;
+  font: 13px Arial, sans-serif;
+}
+
+.affordable {
+  background: var(--sage);
+}
+
+.affordable .card {
+  border-color: #d4dccf;
+}
+
+.affordable .price {
+  color: #50614c;
+}
+
+.note {
+  max-width: 650px;
+  margin: 25px auto 0;
+  text-align: center;
+  font: 13px/1.8 Arial, sans-serif;
+  color: #526052;
+}
+
+/* WHITE PAYMENT SECTION */
+.payment {
+  background: #ffffff;
+  color: #202521;
+  border-top: 1px solid #e5dfd3;
+  border-bottom: 1px solid #e5dfd3;
+}
+
+.payment .section-heading p {
+  color: #303630;
+}
+
+.payment-box {
+  max-width: 760px;
+  margin: auto;
+  border: 2px solid var(--gold);
+  padding: 30px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.payment-box h3 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.payment-box p {
+  font: bold 15px/1.9 Arial, sans-serif;
+  color: #202521;
+}
+
+.payment-box strong {
+  color: #806335;
+}
+
+.booking {
+  background: var(--dark);
+  color: white;
+}
+
+.booking .section-heading p {
+  color: #e2e5df;
+}
+
+form {
+  max-width: 650px;
+  margin: auto;
+  display: grid;
+  gap: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d8d8d0;
+  background: white;
+  color: #202521;
+  font: 14px Arial, sans-serif;
+  border-radius: 0;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form .button {
+  justify-self: start;
+}
+
+.contact {
+  text-align: center;
+  background: white;
+}
+
+.contact-list {
+  font: 15px/2.2 Arial, sans-serif;
+}
+
+.contact-list a {
+  color: #806335;
+}
+
+footer {
+  background: #171a18;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  font: 12px/1.8 Arial, sans-serif;
+}
+
+@media(max-width: 600px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  section {
+    padding: 48px 5%;
+  }
+
+  .hero {
+    min-height: 390px;
+    padding: 50px 7%;
+  }
+
+  .payment-box {
+    padding: 22px;
+  }
+}
 </style>
 </head>
-<body><img src="E7449950-39EF-4625-8B96-4C083FD339B1.png" alt="Kate Massage" style="width:100%;max-height:450px;object-fit:cover;display:block;">
-<div class="top"></div>
-<header><nav>
-<a class="brand" href="#home"><span class="mark">K</span><span><b>Kate Massage</b><small>Relax · Restore · Renew</small></span></a>
-<div class="links"><a href="#services">Services</a><a href="#about">Our Approach</a><a href="#contact">Contact</a><a class="btn" href="#contact">Request Appointment</a></div>
-</nav></header>
+
+<body>
+
+<div class="topbar">
+A CALMER MOMENT. A BETTER YOU.
+</div>
+
+<header>
+  <div class="logo">KATE <span>MASSAGE</span></div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#affordable">Affordable Care</a>
+    <a href="#payment">Payment</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 <main>
-<section class="hero" id="home">
-<div><div class="eyebrow">Your moment of calm</div><h1>Make room for<br><em>well-being.</em></h1>
-<p class="lead">A thoughtful massage experience designed to help you slow down, unwind, and make time for yourself. Explore the services below and contact Kate to arrange an appointment in the USA.</p>
-<div class="actions"><a class="btn" href="#services">Explore Services ↗</a><a class="btn outline" href="sms:8653752664">Text Kate</a></div>
-<p class="note">A calm space to pause, reset, and focus on you.</p></div>
-<div class="hero-image" role="img" aria-label="Peaceful spa setting"><div class="label"><strong>Your time. Your comfort.</strong><span>Discover a more relaxing routine.</span></div></div>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Luxury spa experience for everyone</div>
+    <h1>Relax. Restore.<br>Feel Renewed.</h1>
+    <p>
+      Discover a welcoming massage experience designed around relaxation,
+      comfort, and personal care. Explore our premium treatments or choose
+      an affordable session that fits your budget.
+    </p>
+    <a class="button" href="#booking">REQUEST AN APPOINTMENT</a>
+  </div>
 </section>
-<section class="pad services" id="services"><div class="inner"><div class="head"><div class="eyebrow">Massage menu</div><h2>Choose your moment of calm</h2><p>Explore the three massage services offered by Kate Massage.</p></div>
-<div class="cards">
-<article class="card"><div class="icon">✧</div><h3>Relaxation Massage</h3><p>A soothing massage experience intended to encourage relaxation and give you time to unwind.</p><div class="price-row"><span class="price">$80</span><small>Per session</small></div></article>
-<article class="card"><div class="icon">❋</div><h3>Swedish Massage</h3><p>A classic, gentle massage experience using flowing strokes to help you relax and unwind.</p><div class="price-row"><span class="price">$130</span><small>Per session</small></div></article>
-<article class="card"><div class="icon">✺</div><h3>Deep Tissue Massage</h3><p>A firmer massage option focused on areas of tension, with pressure discussed to suit your comfort.</p><div class="price-row"><span class="price">$180</span><small>Per session</small></div></article>
-<article class="card"><div class="icon">❀</div><h3>Hot Stone Massage</h3><p>A relaxing massage experience that incorporates warmed stones when appropriate and comfortable.</p><div class="price-row"><span class="price">$230</span><small>Per session</small></div></article>
-<article class="card"><div class="icon">❈</div><h3>Full Body Massage</h3><p>A full-body massage experience designed to help you set aside everyday stress and relax.</p><div class="price-row"><span class="price">$280</span><small>Per session</small></div></article>
-<article class="card"><div class="icon">✦</div><h3>Aromatherapy Massage</h3><p>A calming massage experience incorporating aromatic oils, subject to your preferences and sensitivities.</p><div class="price-row"><span class="price">$330</span><small>Per session</small></div></article>
-<article class="card"><div class="icon">❋</div><h3>Premium Signature Massage</h3><p>A longer, tailored relaxation experience planned around your preferences and comfort.</p><div class="price-row"><span class="price">$380</span><small>Per session</small></div></article>
-</div></div></section>
-<section class="pad" id="about"><div class="inner about"><div class="about-image" role="img" aria-label="Relaxing spa treatment room"></div><div><div class="eyebrow">The Kate Massage experience</div><h2>A little time just for you.</h2><p>At Kate Massage, the focus is on making space for comfort, calm, and personal care. Choose the service that suits what you are looking for, then get in touch to discuss your appointment.</p><p>Questions before booking? Contact Kate directly using one of the options below.</p><a class="btn outline" href="#contact">Get in Touch</a></div></div></section>
-<section class="pad contact" id="contact"><div class="inner"><div class="head"><div class="eyebrow">Contact & appointments</div><h2>Let’s arrange your visit.</h2><p>Use a contact option below or prepare an appointment request by text message.</p></div>
-<div class="contact-grid"><div class="panel"><h3>Contact Kate</h3><p>For appointments and service questions in the USA, reach out using your preferred contact method.</p><div class="contact-list">
-<a href="tel:8653752664"><span>Phone</span><span>865-375-2664 ↗</span></a>
-<a href="sms:8653752664"><span>Text message</span><span>Send a text ↗</span></a>
-<a href="https://zangi.com/" target="_blank" rel="noopener"><span>Zangi ID</span><span>1007166302</span></a>
-<a href="mailto:katemassagebooking@gmail.com"><span>iMessage / email</span><span>katemassagebooking@gmail.com ↗</span></a>
-<a href="https://signal.me/#p/+19795590880" target="_blank" rel="noopener"><span>Signal</span><span>979-559-0880 ↗</span></a>
-</div></div>
-<div class="panel"><h3>Request an appointment</h3><p>Fill this out and your phone will prepare a text to Kate. It will not send until you tap Send.</p>
-<form id="bookingForm"><label>Your name<input id="customerName" autocomplete="name" placeholder="Enter your name" required></label>
-<label>Preferred service<select id="service" required><option value="">Choose a massage service</option><option>Relaxation Massage — $80</option>
-<option>Swedish Massage — $130</option>
-<option>Deep Tissue Massage — $180</option>
-<option>Hot Stone Massage — $230</option>
-<option>Full Body Massage — $280</option>
-<option>Aromatherapy Massage — $330</option>
-<option>Premium Signature Massage — $380</option></select></label>
-<label>Preferred date or time<input id="appointmentTime" placeholder="e.g. Saturday afternoon"></label>
-<label>Message (optional)<textarea id="message" placeholder="Anything you'd like to ask?"></textarea></label>
-<button class="btn" type="submit">Prepare Text Request ↗</button><p class="form-note">This form opens your messaging app. It does not collect or store your information on this website.</p></form>
-</div></div></div></section>
+
+<section id="services">
+  <div class="section-heading">
+    <div class="eyebrow">Our treatment menu</div>
+    <h2>Signature Massage Services</h2>
+    <p>
+      Thoughtfully selected massage experiences for clients seeking comfort,
+      relaxation, and a premium spa atmosphere.
+    </p>
+  </div>
+
+  <div class="services">
+
+    <article class="card featured">
+      <div class="card-label">Relax and restore</div>
+      <h3>Relaxation Massage</h3>
+      <div class="price">$100</div>
+      <p>A soothing massage designed to help you unwind and ease everyday tension.</p>
+      <a href="#booking" data-service="Relaxation Massage - $100">Request appointment →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Classic care</div>
+      <h3>Swedish Massage</h3>
+      <div class="price">$150</div>
+      <p>Flowing massage techniques for a calming and relaxing experience.</p>
+      <a href="#booking" data-service="Swedish Massage - $150">Request appointment →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Focused treatment</div>
+      <h3>Deep Tissue Massage</h3>
+      <div class="price">$200</div>
+      <p>Focused pressure for areas of muscle tightness, adjusted to your comfort.</p>
+      <a href="#booking" data-service="Deep Tissue Massage - $200">Request appointment →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Warm relaxation</div>
+      <h3>Hot Stone Massage</h3>
+      <div class="price">$250</div>
+      <p>A warming massage experience using smooth heated stones where appropriate.</p>
+      <a href="#booking" data-service="Hot Stone Massage - $250">Request appointment →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Full-body care</div>
+      <h3>Full Body Massage</h3>
+      <div class="price">$300</div>
+      <p>A relaxing full-body experience tailored to your preferences and comfort.</p>
+      <a href="#booking" data-service="Full Body Massage - $300">Request appointment →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Sensory relaxation</div>
+      <h3>Aromatherapy Massage</h3>
+      <div class="price">$350</div>
+      <p>A relaxing massage using selected aromatic oils, subject to sensitivities.</p>
+      <a href="#booking" data-service="Aromatherapy Massage - $350">Request appointment →</a>
+    </article>
+
+    <article class="card featured">
+      <div class="card-label">Premium experience</div>
+      <h3>Premium Signature Massage</h3>
+      <div class="price">$400</div>
+      <p>A personalized premium session with treatment details agreed before booking.</p>
+      <a href="#booking" data-service="Premium Signature Massage - $400">Request appointment →</a>
+    </article>
+
+  </div>
+</section>
+
+<section id="affordable" class="affordable">
+  <div class="section-heading">
+    <div class="eyebrow">Care within reach</div>
+    <h2>Community Care Options</h2>
+    <p>
+      Relaxation options at reduced prices for clients on a budget.
+      These appointments are limited each week.
+    </p>
+  </div>
+
+  <div class="services">
+
+    <article class="card">
+      <div class="card-label">Affordable option</div>
+      <h3>Express Relaxation</h3>
+      <div class="price">$40</div>
+      <div>20-minute session</div>
+      <p>A short, calming break focused on relaxation and comfort.</p>
+      <a href="#booking" data-service="Community Care Express Relaxation - $40 - 20 minutes">Request appointment →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Affordable option</div>
+      <h3>Extended Relaxation</h3>
+      <div class="price">$70</div>
+      <div>45-minute session</div>
+      <p>Extra time to unwind with a relaxing session tailored to your comfort.</p>
+      <a href="#booking" data-service="Community Care Extended Relaxation - $70 - 45 minutes">Request appointment →</a>
+    </article>
+
+  </div>
+
+  <p class="note">
+    Community Care appointments are limited each week.
+    Please ask about availability when requesting your appointment.
+  </p>
+</section>
+
+<section id="payment" class="payment">
+  <div class="section-heading">
+    <div class="eyebrow">Booking and payment</div>
+    <h2>Our Payment Policy</h2>
+    <p>Please review our payment terms before requesting your appointment.</p>
+  </div>
+
+  <div class="payment-box">
+    <h3>50% Deposit Required</h3>
+    <p>
+      A <strong>50% deposit</strong> is required to secure your appointment.
+      Your appointment is not confirmed until the deposit has been received
+      and confirmed by Kate Massage.
+    </p>
+    <p>
+      The remaining <strong>50% balance is due immediately after your
+      massage service is completed.</strong>
+    </p>
+    <p>
+      Please confirm the accepted payment method with us before paying.
+      Thank you for choosing Kate Massage.
+    </p>
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <div class="section-heading">
+    <div class="eyebrow">Your time to unwind</div>
+    <h2>Request an Appointment</h2>
+    <p>
+      Complete the form to prepare a booking request by text.
+      Your appointment is not confirmed until you receive a reply.
+    </p>
+  </div>
+
+  <form id="bookingForm">
+    <input id="customerName" type="text" placeholder="Your name" required>
+    <input id="customerPhone" type="tel" placeholder="Your phone number" required>
+
+    <select id="service" required>
+      <option value="">Choose a service</option>
+      <option>Community Care Express Relaxation - $40 - 20 minutes</option>
+      <option>Community Care Extended Relaxation - $70 - 45 minutes</option>
+      <option>Relaxation Massage - $100</option>
+      <option>Swedish Massage - $150</option>
+      <option>Deep Tissue Massage - $200</option>
+      <option>Hot Stone Massage - $250</option>
+      <option>Full Body Massage - $300</option>
+      <option>Aromatherapy Massage - $350</option>
+      <option>Premium Signature Massage - $400</option>
+    </select>
+
+    <input id="preferredDate" type="text" placeholder="Preferred date and time">
+    <textarea id="notes" placeholder="Anything you'd like us to know? (optional)"></textarea>
+
+    <button class="button" type="submit">SEND BOOKING REQUEST BY TEXT</button>
+  </form>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-heading">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Contact Kate Massage</h2>
+    <p>Contact us with questions about services, availability, or booking.</p>
+  </div>
+
+  <div class="contact-list">
+    <div>Phone / Text: <a href="sms:+18653752664">865-375-2664</a></div>
+    <div>Email: <a href="mailto:katemassagebooking@gmail.com">katemassagebooking@gmail.com</a></div>
+    <div>Signal: <a href="https://signal.me/#p/+19795590880">979-559-0880</a></div>
+    <div>Zangi ID: 1007166302</div>
+  </div>
+</section>
+
 </main>
-<footer><div class="foot"><span>© <span id="year"></span> Kate Massage. All rights reserved.</span><span>Massage services · USA</span></div></footer>
+
+<footer>
+  © <span id="year"></span> Kate Massage. All rights reserved.<br>
+  Massage services are tailored to comfort and are not a substitute for medical care.
+</footer>
+
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('customerName').value.trim();const service=document.getElementById('service').value;const time=document.getElementById('appointmentTime').value.trim();const message=document.getElementById('message').value.trim();const body=`Hello Kate, my name is ${name}. I'd like to ask about an appointment for ${service}.${time?' Preferred date/time: '+time+'.':''}${message?' Message: '+message:''}`;window.location.href='sms:8653752664&body='+encodeURIComponent(body);});
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.querySelectorAll("[data-service]").forEach(function(link) {
+  link.addEventListener("click", function() {
+    document.getElementById("service").value = this.getAttribute("data-service");
+  });
+});
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var name = document.getElementById("customerName").value.trim();
+  var phone = document.getElementById("customerPhone").value.trim();
+  var service = document.getElementById("service").value;
+  var date = document.getElementById("preferredDate").value.trim() || "Flexible";
+  var notes = document.getElementById("notes").value.trim() || "None";
+
+  var message = "Hello Kate Massage, I would like to request an appointment.\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Service: " + service + "\n" +
+    "Preferred date/time: " + date + "\n" +
+    "Notes: " + notes;
+
+  window.location.href = "sms:+18653752664?&body=" + encodeURIComponent(message);
+});
 </script>
-</body></html>
+
+</body>
+</html>
