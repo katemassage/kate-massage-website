@@ -6,7 +6,7 @@
 
 <title>Kate Massage | Luxury Massage & Wellness</title>
 
-<meta name="description" content="Discover relaxation and personalized massage services at Kate Massage. Contact us to request an appointment.">
+<meta name="description" content="Experience relaxation and personalized massage services at Kate Massage. Contact us to request an appointment.">
 
 <meta property="og:title" content="Kate Massage | Luxury Massage & Wellness">
 <meta property="og:description" content="Relax, refresh and restore with Kate Massage.">
@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://katemassage.github.io/kate-massage-website/">
 <meta property="og:type" content="website">
 
-<!-- Google Analytics -->
+<!-- GOOGLE ANALYTICS -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L75BY405RZ"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -29,7 +29,6 @@ gtag('config', 'G-L75BY405RZ');
     --gold: #c5a66a;
     --cream: #f8f5ef;
     --white: #ffffff;
-    --sage: #7b8571;
     --text: #44443e;
 }
 
@@ -195,10 +194,6 @@ section {
     color: var(--gold);
 }
 
-.dark-section .card {
-    color: var(--text);
-}
-
 .about {
     max-width: 850px;
     margin: auto;
@@ -254,12 +249,53 @@ label {
     font-weight: bold;
 }
 
+/* PAYMENT POLICY */
+
 .policy {
-    background: #eee9df;
-    padding: 24px;
-    border-left: 4px solid var(--gold);
-    margin-top: 25px;
+    background: #f8f5ef;
+    color: #333;
+    padding: 25px;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    margin-top: 30px;
 }
+
+.policy h3 {
+    color: #80612e;
+    font-size: 23px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.policy-step {
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd2bd;
+}
+
+.policy-step:last-of-type {
+    border-bottom: none;
+}
+
+.policy-step h4 {
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.payment-example {
+    background: white;
+    padding: 18px;
+    border-radius: 6px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.payment-example strong {
+    color: #80612e;
+    font-size: 19px;
+}
+
+/* FAQ */
 
 .faq-item {
     max-width: 800px;
@@ -278,10 +314,6 @@ label {
 
 .contact {
     text-align: center;
-}
-
-.contact p {
-    margin: 10px 0;
 }
 
 .contact-icons {
@@ -316,6 +348,12 @@ label {
 .contact-details {
     margin-top: 25px;
     line-height: 2;
+}
+
+.contact-details a {
+    color: #9b7840;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer {
@@ -615,23 +653,57 @@ footer a {
 
         </form>
 
+        <!-- CLEAR PAYMENT POLICY -->
+
         <div class="policy">
-            <h3>Payment Policy</h3>
 
-            <p>
-                A 50% deposit is required to secure an appointment.
-                The remaining 50% is due immediately after the service.
+            <h3>💳 Payment & Booking Policy</h3>
+
+            <div class="policy-step">
+                <h4>1. Booking Deposit — 50%</h4>
+                <p>
+                    A 50% deposit of the total service price
+                    must be paid in advance to reserve your appointment.
+                </p>
+            </div>
+
+            <div class="policy-step">
+                <h4>2. Remaining Balance — 50%</h4>
+                <p>
+                    The remaining 50% must be paid immediately
+                    after your massage session is completed.
+                </p>
+            </div>
+
+            <div class="policy-step">
+                <h4>3. Appointment Confirmation</h4>
+                <p>
+                    Your appointment is not confirmed until
+                    your deposit has been received and acknowledged
+                    by Kate Massage.
+                </p>
+            </div>
+
+            <div class="policy-step">
+                <h4>4. Accepted Payment Methods</h4>
+                <p>
+                    Please contact us before making a payment
+                    to confirm the available payment methods
+                    and payment details.
+                </p>
+            </div>
+
+            <div class="payment-example">
+                <p><strong>Example: $100 Massage</strong></p>
+                <p>Before your appointment: $50 deposit</p>
+                <p>After your massage: $50 remaining balance</p>
+                <p><strong>Total payment: $100</strong></p>
+            </div>
+
+            <p style="text-align:center; margin-top:20px;">
+                Thank you for choosing Kate Massage!
             </p>
 
-            <p>
-                Appointments are not confirmed until the deposit
-                has been received and confirmed.
-            </p>
-
-            <p>
-                Please confirm the accepted payment method directly
-                with Kate Massage before making a payment.
-            </p>
         </div>
 
     </div>
@@ -672,12 +744,12 @@ footer a {
 
     <div class="faq-item">
         <h3>Is a deposit required?</h3>
-        <p>Yes. A 50% deposit is required to secure your appointment.</p>
+        <p>Yes. A 50% deposit is required in advance to reserve your appointment.</p>
     </div>
 
     <div class="faq-item">
         <h3>When is the remaining payment due?</h3>
-        <p>The remaining 50% is due immediately after the service.</p>
+        <p>The remaining 50% is due immediately after your massage session.</p>
     </div>
 
     <div class="faq-item">
@@ -686,8 +758,8 @@ footer a {
     </div>
 
     <div class="faq-item">
-        <h3>How do I know if my appointment is confirmed?</h3>
-        <p>Your appointment is confirmed after your deposit has been received and confirmed.</p>
+        <h3>When is my appointment confirmed?</h3>
+        <p>Your appointment is confirmed after your deposit has been received and acknowledged.</p>
     </div>
 </section>
 
@@ -696,27 +768,27 @@ footer a {
 <section id="contact">
     <div class="section-title">
         <h2>Contact Kate Massage</h2>
-        <p>We would love to hear from you. Choose your preferred way to get in touch.</p>
+        <p>Choose your preferred way to get in touch.</p>
     </div>
 
     <div class="contact-icons">
 
         <a href="sms:+18653752664">
-            <span>💬</span> Text Us
+            💬 Text Us
         </a>
 
         <a href="https://signal.me/#p/+19795590880"
            target="_blank" rel="noopener">
-            <span>🟢</span> Signal
+            🟢 Signal
         </a>
 
         <a href="https://zangi.com/"
            target="_blank" rel="noopener">
-            <span>🟣</span> Zangi
+            🟣 Zangi
         </a>
 
         <a href="mailto:katemassagebooking@gmail.com">
-            <span>✉️</span> Email Us
+            ✉️ Email Us
         </a>
 
     </div>
@@ -744,8 +816,10 @@ footer a {
 <footer>
     <p>© 2026 Kate Massage. All Rights Reserved.</p>
     <p>Relax. Refresh. Restore.</p>
-    <p><a href="#faq">Frequently Asked Questions</a> |
-       <a href="#contact">Contact Us</a></p>
+    <p>
+        <a href="#faq">Frequently Asked Questions</a> |
+        <a href="#contact">Contact Us</a>
+    </p>
 </footer>
 
 <!-- FLOATING CONTACT BUTTON -->
@@ -754,10 +828,11 @@ footer a {
     Contact Us
 </a>
 
-<!-- BOOKING FORM SCRIPT -->
+<!-- BOOKING FORM -->
 
 <script>
 document.getElementById("bookingForm").addEventListener("submit", function(e) {
+
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
@@ -778,6 +853,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
 
     window.location.href =
         "sms:+18653752664?&body=" + encodeURIComponent(bookingMessage);
+
 });
 </script>
 
