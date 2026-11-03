@@ -6,239 +6,127 @@
 
 <title>Gallery | Kate Massage</title>
 <meta name="description" content="Explore the Kate Massage photo gallery.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#11100e">
 
 <style>
-:root {
-  --black:#11100e;
-  --dark:#191713;
-  --gold:#c7a66a;
-  --gold-light:#e2c996;
-  --cream:#f6f0e5;
-  --muted:#b8afa1;
-  --border:rgba(199,166,106,.28);
-}
-
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background:var(--black);
-  color:var(--cream);
-  font-family:'DM Sans',Arial,sans-serif;
-  line-height:1.7;
-}
-
-.container {
-  width:min(1150px,90%);
-  margin:auto;
+    background: #11100e;
+    color: #f5eee2;
+    font-family: Arial, sans-serif;
 }
 
 header {
-  background:#11100e;
-  border-bottom:1px solid var(--border);
-  padding:20px 0;
+    text-align: center;
+    padding: 45px 20px 30px;
 }
 
-.nav {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
+header h1 {
+    color: #d6b574;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 12px;
 }
 
-.brand {
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:30px;
-  color:var(--gold-light);
-  text-decoration:none;
-}
-
-.brand small {
-  display:block;
-  font-family:'DM Sans',Arial,sans-serif;
-  font-size:9px;
-  letter-spacing:4px;
-  color:var(--muted);
-  text-align:center;
-  margin-top:-7px;
+header p {
+    color: #c9c0b2;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .back-link {
-  color:var(--gold-light);
-  text-decoration:none;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:1px;
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 24px;
+    border: 1px solid #d6b574;
+    border-radius: 30px;
+    color: #d6b574;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.hero {
-  text-align:center;
-  padding:85px 15px 55px;
-}
-
-.eyebrow {
-  color:var(--gold-light);
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:11px;
-  font-weight:700;
-  margin-bottom:15px;
-}
-
-h1 {
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:clamp(48px,8vw,76px);
-  font-weight:500;
-  line-height:1.1;
-}
-
-.gold {
-  color:var(--gold-light);
-}
-
-.hero p {
-  color:var(--muted);
-  max-width:600px;
-  margin:20px auto 0;
-  font-size:14px;
+.back-link:hover {
+    background: #d6b574;
+    color: #11100e;
 }
 
 .gallery {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:22px;
-  padding:20px 0 90px;
+    max-width: 1100px;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.gallery-item {
-  background:var(--dark);
-  border:1px solid var(--border);
-  padding:10px;
-  overflow:hidden;
+.gallery img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid rgba(214, 181, 116, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.gallery-item img {
-  display:block;
-  width:100%;
-  height:370px;
-  object-fit:cover;
-  cursor:pointer;
-  transition:transform .4s;
-}
-
-.gallery-item img:hover {
-  transform:scale(1.025);
-}
-
-.gallery-item:last-child {
-  grid-column:1 / -1;
-}
-
-.gallery-item:last-child img {
-  height:450px;
-}
-
-.caption {
-  text-align:center;
-  padding:15px 5px 8px;
-  color:var(--gold-light);
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:23px;
-}
-
-.button-area {
-  text-align:center;
-  padding:0 15px 90px;
-}
-
-.btn {
-  display:inline-block;
-  padding:14px 27px;
-  background:var(--gold);
-  color:#17130e;
-  text-decoration:none;
-  font-size:11px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  transition:.25s;
-}
-
-.btn:hover {
-  background:transparent;
-  color:var(--gold-light);
-  outline:1px solid var(--gold);
-}
-
-footer {
-  background:#0c0b09;
-  border-top:1px solid var(--border);
-  text-align:center;
-  padding:35px 15px;
-  color:var(--muted);
-  font-size:12px;
-}
-
-footer a {
-  color:var(--gold-light);
-  text-decoration:none;
+.gallery img:hover {
+    transform: scale(1.02);
 }
 
 .lightbox {
-  display:none;
-  position:fixed;
-  z-index:9999;
-  inset:0;
-  background:rgba(0,0,0,.95);
-  justify-content:center;
-  align-items:center;
-  padding:20px;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .lightbox img {
-  max-width:95%;
-  max-height:85vh;
-  object-fit:contain;
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .close {
-  position:absolute;
-  top:15px;
-  right:25px;
-  color:white;
-  font-size:40px;
-  cursor:pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
 }
 
-@media(max-width:650px) {
-  .nav {
-    flex-wrap:wrap;
-  }
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #a99d8c;
+    border-top: 1px solid rgba(214, 181, 116, 0.2);
+    font-size: 13px;
+}
 
-  .gallery {
-    grid-template-columns:1fr;
-    gap:18px;
-  }
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 30px;
+    }
 
-  .gallery-item:last-child {
-    grid-column:auto;
-  }
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 
-  .gallery-item img,
-  .gallery-item:last-child img {
-    height:300px;
-  }
-
-  .hero {
-    padding-top:65px;
-  }
+    .gallery img {
+        height: 300px;
+    }
 }
 </style>
 </head>
@@ -246,96 +134,35 @@ footer a {
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="index.html" class="brand">
-      KATE
-      <small>MASSAGE & WELLNESS</small>
-    </a>
-
-    <a href="index.html" class="back-link">← Back to Home</a>
-  </div>
+    <h1>Kate Massage Gallery</h1>
+    <p>Explore our gallery and discover the Kate Massage experience.</p>
+    <a class="back-link" href="index.html">← Back to Home</a>
 </header>
 
-<section class="hero">
-  <div class="eyebrow">The Kate Massage Collection</div>
-
-  <h1>Our <span class="gold">Gallery</span></h1>
-
-  <p>
-    Explore our photo collection and take a closer look
-    at the Kate Massage experience.
-  </p>
-</section>
-
-<main class="container">
-  <div class="gallery">
-
-    <!-- FIRST PICTURE: IMG_2376.jpeg -->
-
-    <div class="gallery-item">
-      <img src="IMG_2376.jpeg"
-           alt="Kate Massage photograph"
-           onclick="openImage(this)">
-      <div class="caption">The Experience</div>
-    </div>
-
-    <!-- SECOND PICTURE: ORIGINAL IMAGE -->
-
-    <div class="gallery-item">
-      <img src="E7449950-39EF-4625-8B96-4C083FD339B1.png"
-           alt="Kate Massage gallery photograph"
-           onclick="openImage(this)">
-      <div class="caption">Kate Massage</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="IMG_2377.jpeg"
-           alt="Kate Massage gallery photograph"
-           onclick="openImage(this)">
-      <div class="caption">Relaxation & Wellness</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="IMG_2412.webp"
-           alt="Kate Massage gallery photograph"
-           onclick="openImage(this)">
-      <div class="caption">A Moment for Yourself</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="IMG_2413.jpeg"
-           alt="Kate Massage gallery photograph"
-           onclick="openImage(this)">
-      <div class="caption">The Kate Collection</div>
-    </div>
-
-  </div>
+<main class="gallery">
+    <img src="IMG_2376.jpeg" alt="Kate Massage gallery photo 1" onclick="openLightbox(this)">
+    <img src="IMG_2377.jpeg" alt="Kate Massage gallery photo 2" onclick="openLightbox(this)">
+    <img src="IMG_2412.webp" alt="Kate Massage gallery photo 3" onclick="openLightbox(this)">
+    <img src="IMG_2413.jpeg" alt="Kate Massage gallery photo 4" onclick="openLightbox(this)">
 </main>
 
-<div class="button-area">
-  <a href="index.html" class="btn">Return to Homepage</a>
-</div>
-
-<div class="lightbox" id="lightbox" onclick="closeImage()">
-  <span class="close">&times;</span>
-  <img id="lightboxImage" src="" alt="Enlarged gallery photograph">
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightboxImage" src="" alt="Enlarged gallery photo">
 </div>
 
 <footer>
-  <p>© <span id="year"></span> Kate Massage. All rights reserved.</p>
-  <p><a href="index.html">Return to Homepage</a></p>
+    © 2026 Kate Massage. All Rights Reserved.
 </footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-function openImage(img) {
-  document.getElementById('lightboxImage').src = img.src;
-  document.getElementById('lightbox').style.display = 'flex';
+function openLightbox(image) {
+    document.getElementById("lightboxImage").src = image.src;
+    document.getElementById("lightbox").style.display = "flex";
 }
 
-function closeImage() {
-  document.getElementById('lightbox').style.display = 'none';
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
 }
 </script>
 
