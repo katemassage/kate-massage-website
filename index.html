@@ -1,841 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Kate Massage | Luxury Massage & Wellness</title>
-
-  <meta name="description" content="Discover a more relaxing experience with Kate Massage. Explore massage and wellness services, view our service menu and make a private booking enquiry.">
-
-  <meta name="theme-color" content="#11100e">
-
-  <meta property="og:title" content="Kate Massage | Luxury Massage & Wellness">
-  <meta property="og:description" content="Relax, recharge and enjoy a personalized massage experience. Contact Kate Massage to enquire about appointments.">
-  <meta property="og:image" content="https://katemassage.github.io/kate-massage-website/E7449950-39EF-4625-8B96-4C083FD339B1.png">
-  <meta property="og:url" content="https://katemassage.github.io/kate-massage-website/">
-  <meta property="og:type" content="website">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --black: #11100e;
-      --dark: #191713;
-      --dark-soft: #211e19;
-      --gold: #c7a66a;
-      --gold-light: #e2c996;
-      --cream: #f6f0e5;
-      --muted: #b8afa1;
-      --white: #fffdf8;
-      --border: rgba(199,166,106,.28);
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'DM Sans', Arial, sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--black);
-      color: var(--cream);
-      font-family: var(--sans);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button, input, select, textarea {
-      font: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(1160px, 90%);
-      margin: auto;
-    }
-
-    .gold {
-      color: var(--gold-light);
-    }
-
-    .eyebrow {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 11px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    h1, h2, h3 {
-      font-family: var(--serif);
-      font-weight: 500;
-      line-height: 1.05;
-    }
-
-    h2 {
-      font-size: clamp(38px, 5vw, 58px);
-      margin-bottom: 20px;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto 45px;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 25px;
-      border: 1px solid var(--gold);
-      background: var(--gold);
-      color: #17130e;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      transition: .25s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: transparent;
-      color: var(--gold-light);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--gold-light);
-    }
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    /* HEADER */
-
-    header {
-      background: rgba(17,16,14,.97);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(12px);
-    }
-
-    .nav {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      font-family: var(--serif);
-      font-size: 30px;
-      color: var(--gold-light);
-      letter-spacing: 1px;
-      white-space: nowrap;
-    }
-
-    .brand small {
-      display: block;
-      font-family: var(--sans);
-      font-size: 9px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      text-align: center;
-      margin-top: -5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--cream);
-      transition: .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--gold-light);
-      padding: 8px 12px;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 690px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(10,9,8,.96), rgba(10,9,8,.78), rgba(10,9,8,.40)),
-        url('E7449950-39EF-4625-8B96-4C083FD339B1.png') center/cover no-repeat;
-    }
-
-    .hero-content {
-      max-width: 720px;
-      padding: 100px 0;
-    }
-
-    .hero h1 {
-      font-size: clamp(55px, 8vw, 94px);
-      color: var(--white);
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: var(--gold-light);
-      font-style: italic;
-    }
-
-    .hero p {
-      color: #e0d8cb;
-      font-size: 16px;
-      max-width: 530px;
-      margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .hero-note {
-      margin-top: 48px;
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    /* TRUST STRIP */
-
-    .trust-strip {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--dark);
-      padding: 25px 0;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      text-align: center;
-    }
-
-    .trust-grid div {
-      color: var(--gold-light);
-      font-family: var(--serif);
-      font-size: 22px;
-    }
-
-    .trust-grid small {
-      display: block;
-      color: var(--muted);
-      font-family: var(--sans);
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    /* ABOUT */
-
-    section {
-      padding: 100px 0;
-      scroll-margin-top: 85px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 65px;
-    }
-
-    .about-image {
-      border: 1px solid var(--border);
-      padding: 12px;
-      background: var(--dark);
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 480px;
-      object-fit: cover;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .about-signature {
-      color: var(--gold-light);
-      font-family: var(--serif);
-      font-size: 29px;
-      font-style: italic;
-      margin-top: 25px;
-    }
-
-    /* SERVICES */
-
-    #services {
-      background: var(--dark);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: #171511;
-      border: 1px solid var(--border);
-      padding: 32px 26px;
-      transition: .3s;
-      position: relative;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold);
-    }
-
-    .service-number {
-      color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-
-    .service-card h3 {
-      font-size: 29px;
-      margin-bottom: 14px;
-      color: var(--white);
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 13px;
-      min-height: 65px;
-      margin-bottom: 24px;
-    }
-
-    .price {
-      color: var(--gold-light);
-      font-family: var(--serif);
-      font-size: 34px;
-      border-top: 1px solid var(--border);
-      padding-top: 18px;
-    }
-
-    .price small {
-      color: var(--muted);
-      font-family: var(--sans);
-      font-size: 10px;
-      letter-spacing: 1px;
-    }
-
-    .service-note {
-      color: var(--muted);
-      text-align: center;
-      font-size: 12px;
-      margin-top: 30px;
-    }
-
-    /* EXPERIENCE */
-
-    .experience {
-      background:
-        linear-gradient(rgba(17,16,14,.92), rgba(17,16,14,.94)),
-        url('E7449950-39EF-4625-8B96-4C083FD339B1.png') center/cover fixed;
-      text-align: center;
-    }
-
-    .experience-content {
-      max-width: 750px;
-      margin: auto;
-    }
-
-    .experience p {
-      color: var(--muted);
-      margin: 0 auto 30px;
-    }
-
-    /* GALLERY */
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 15px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      border: 1px solid var(--border);
-    }
-
-    .gallery-placeholder {
-      min-height: 300px;
-      border: 1px dashed var(--border);
-      background: var(--dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--muted);
-      padding: 20px;
-      font-family: var(--serif);
-      font-size: 24px;
-    }
-
-    /* BOOKING */
-
-    #booking {
-      background: var(--dark);
-    }
-
-    .booking-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .booking-info p {
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .booking-info h3 {
-      color: var(--gold-light);
-      font-size: 30px;
-      margin-bottom: 18px;
-    }
-
-    .policy-box {
-      background: #14120f;
-      border-left: 3px solid var(--gold);
-      padding: 22px;
-      margin-top: 25px;
-    }
-
-    .policy-box h4 {
-      color: var(--gold-light);
-      margin-bottom: 10px;
-      font-family: var(--serif);
-      font-size: 24px;
-    }
-
-    .policy-box p {
-      font-size: 13px;
-      margin-bottom: 8px;
-    }
-
-    .booking-form {
-      background: #14120f;
-      border: 1px solid var(--border);
-      padding: 35px;
-    }
-
-    .booking-form h3 {
-      font-size: 32px;
-      margin-bottom: 25px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .field {
-      margin-bottom: 18px;
-    }
-
-    .field label {
-      display: block;
-      color: var(--gold-light);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 7px;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      background: #201d18;
-      border: 1px solid var(--border);
-      color: var(--white);
-      padding: 13px;
-      outline: none;
-      border-radius: 0;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--gold);
-    }
-
-    .field select option {
-      background: #201d18;
-    }
-
-    .field textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .form-disclaimer {
-      color: var(--muted);
-      font-size: 11px;
-      margin-top: 15px;
-    }
-
-    /* PRIVATE ENQUIRIES */
-
-    .private-box {
-      border: 1px solid var(--border);
-      padding: 35px;
-      margin-top: 35px;
-      background: #171511;
-    }
-
-    .private-box h3 {
-      color: var(--gold-light);
-      font-size: 29px;
-      margin-bottom: 12px;
-    }
-
-    .private-box p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* FAQ */
-
-    .faq-list {
-      max-width: 850px;
-      margin: 35px auto 0;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      padding: 22px 0;
-    }
-
-    .faq-item h3 {
-      font-size: 25px;
-      color: var(--gold-light);
-      margin-bottom: 9px;
-    }
-
-    .faq-item p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* CONTACT */
-
-    #contact {
-      background: var(--dark);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      max-width: 850px;
-      margin: 40px auto 0;
-    }
-
-    .contact-card {
-      border: 1px solid var(--border);
-      background: #15130f;
-      padding: 25px;
-      text-align: center;
-      transition: .25s;
-    }
-
-    .contact-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-3px);
-    }
-
-    .contact-icon {
-      font-size: 27px;
-      color: var(--gold-light);
-      margin-bottom: 10px;
-    }
-
-    .contact-card h3 {
-      font-size: 25px;
-      margin-bottom: 7px;
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      font-size: 13px;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-card span {
-      display: inline-block;
-      color: var(--gold-light);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-top: 12px;
-    }
-
-    .contact-note {
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 25px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #0c0b09;
-      border-top: 1px solid var(--border);
-      padding: 45px 0 25px;
-      text-align: center;
-    }
-
-    .footer-brand {
-      font-family: var(--serif);
-      font-size: 34px;
-      color: var(--gold-light);
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 12px;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin: 20px 0;
-    }
-
-    .footer-links a {
-      color: var(--gold-light);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .copyright {
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-      margin-top: 25px;
-    }
-
-    /* FLOATING CONTACT */
-
-    .floating-contact {
-      position: fixed;
-      bottom: 20px;
-      right: 18px;
-      z-index: 900;
-      background: var(--gold);
-      color: #17130e;
-      padding: 13px 18px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      box-shadow: 0 5px 25px rgba(0,0,0,.4);
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width: 900px) {
-      .nav-links {
-        gap: 13px;
-      }
-
-      .nav-links a {
-        font-size: 10px;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-grid,
-      .booking-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-image {
-        max-width: 650px;
-      }
-    }
-
-    @media(max-width: 680px) {
-      .nav {
-        min-height: 72px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: #14120f;
-        border-bottom: 1px solid var(--border);
-        padding: 20px 5%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        font-size: 12px;
-      }
-
-      .hero {
-        min-height: 590px;
-        background-position: 60% center;
-      }
-
-      .hero-content {
-        padding: 75px 0;
-      }
-
-      .hero h1 {
-        font-size: 58px;
-      }
-
-      section {
-        padding: 75px 0;
-      }
-
-      .trust-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card p {
-        min-height: auto;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid img,
-      .gallery-placeholder {
-        height: 280px;
-        min-height: 280px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .booking-form {
-        padding: 23px 18px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-image img {
-        height: 350px;
-      }
-
-      .floating-contact {
-        bottom: 12px;
-        right: 12px;
-      }
-    }
-  </style>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L75BY405RZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-L75BY405RZ');
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kate Massage | Luxury Massage & Wellness</title>
+
+<meta name="description" content="Discover a relaxing experience with Kate Massage. Explore massage services and make a private appointment enquiry.">
+<meta name="theme-color" content="#11100e">
+
+<meta property="og:title" content="Kate Massage | Luxury Massage & Wellness">
+<meta property="og:description" content="Relax, restore and renew with Kate Massage.">
+<meta property="og:image" content="https://katemassage.github.io/kate-massage-website/E7449950-39EF-4625-8B96-4C083FD339B1.png">
+<meta property="og:url" content="https://katemassage.github.io/kate-massage-website/">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black:#11100e;
+  --dark:#191713;
+  --gold:#c7a66a;
+  --gold-light:#e2c996;
+  --cream:#f6f0e5;
+  --muted:#b8afa1;
+  --border:rgba(199,166,106,.28);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',Arial,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:var(--sans);
+  line-height:1.7;
+}
+
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+
+.container{width:min(1160px,90%);margin:auto}
+
+.gold{color:var(--gold-light)}
+
+h1,h2,h3{
+  font-family:var(--serif);
+  font-weight:500;
+  line-height:1.08;
+}
+
+h2{font-size:clamp(38px,5vw,58px);margin-bottom:20px}
+
+section{padding:95px 0;scroll-margin-top:85px}
+
+.center{text-align:center}
+
+.eyebrow{
+  color:var(--gold-light);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.section-intro{
+  color:var(--muted);
+  max-width:620px;
+  margin:0 auto 40px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 25px;
+  border:1px solid var(--gold);
+  background:var(--gold);
+  color:#17130e;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  transition:.25s;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:transparent;
+  color:var(--gold-light);
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--gold-light);
+}
+
+.btn-outline:hover{
+  background:var(--gold);
+  color:var(--black);
+}
+
+/* HEADER */
+
+header{
+  background:rgba(17,16,14,.97);
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(12px);
+}
+
+.nav{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  font-family:var(--serif);
+  font-size:30px;
+  color:var(--gold-light);
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+
+.brand small{
+  display:block;
+  font-family:var(--sans);
+  font-size:9px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  text-align:center;
+  margin-top:-5px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:23px;
+  list-style:none;
+}
+
+.nav-links a{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  transition:.2s;
+}
+
+.nav-links a:hover{color:var(--gold-light)}
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:1px solid var(--border);
+  color:var(--gold-light);
+  padding:8px 12px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:690px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(10,9,8,.96),rgba(10,9,8,.78),rgba(10,9,8,.40)),
+    url('E7449950-39EF-4625-8B96-4C083FD339B1.png') center/cover no-repeat;
+}
+
+.hero-content{
+  max-width:720px;
+  padding:100px 0;
+}
+
+.hero h1{
+  font-size:clamp(55px,8vw,94px);
+  color:#fffdf8;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:var(--gold-light);
+  font-style:italic;
+}
+
+.hero p{
+  color:#e0d8cb;
+  font-size:16px;
+  max-width:530px;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.hero-note{
+  margin-top:48px;
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* TRUST STRIP */
+
+.trust-strip{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  background:var(--dark);
+  padding:25px 0;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  text-align:center;
+}
+
+.trust-grid div{
+  color:var(--gold-light);
+  font-family:var(--serif);
+  font-size:22px;
+}
+
+.trust-grid small{
+  display:block;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:65px;
+}
+
+.about-image{
+  border:1px solid var(--border);
+  padding:12px;
+  background:var(--dark);
+}
+
+.about-image img{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+}
+
+.about-text p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.about-signature{
+  color:var(--gold-light);
+  font-family:var(--serif);
+  font-size:29px;
+  font-style:italic;
+  margin-top:25px;
+}
+
+/* SERVICES */
+
+#services{background:var(--dark)}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service-card{
+  background:#171511;
+  border:1px solid var(--border);
+  padding:32px 26px;
+  transition:.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--gold);
+}
+
+.service-number{
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  font-size:29px;
+  margin-bottom:14px;
+  color:#fffdf8;
+}
+
+.service-card p{
+  color:var(--muted);
+  font-size:13px;
+  min-height:65px;
+  margin-bottom:24px;
+}
+
+.price{
+  color:var(--gold-light);
+  font-family:var(--serif);
+  font-size:34px;
+  border-top:1px solid var(--border);
+  padding-top:18px;
+}
+
+.price small{
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.service-note{
+  color:var(--muted);
+  text-align:center;
+  font-size:12px;
+  margin-top:30px;
+}
+
+/* EXPERIENCE */
+
+.experience{
+  background:
+    linear-gradient(rgba(17,16,14,.92),rgba(17,16,14,.94)),
+    url('E7449950-39EF-4625-8B96-4C083FD339B1.png') center/cover;
+  text-align:center;
+}
+
+.experience-content{max-width:750px;margin:auto}
+
+.experience p{
+  color:var(--muted);
+  margin:0 auto 30px;
+}
+
+/* GALLERY PREVIEW */
+
+.gallery-preview{
+  background:#11100e;
+}
+
+.gallery-preview-card{
+  max-width:850px;
+  margin:0 auto;
+  border:1px solid var(--border);
+  background:var(--dark);
+  padding:14px;
+}
+
+.gallery-preview-card img{
+  width:100%;
+  height:390px;
+  object-fit:cover;
+}
+
+.gallery-preview-caption{
+  text-align:center;
+  padding:27px 15px 20px;
+}
+
+.gallery-preview-caption p{
+  color:var(--muted);
+  margin:10px auto 22px;
+  max-width:550px;
+  font-size:14px;
+}
+
+/* BOOKING */
+
+#booking{background:var(--dark)}
+
+.booking-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:50px;
+  align-items:start;
+}
+
+.booking-info p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.policy-box{
+  background:#14120f;
+  border-left:3px solid var(--gold);
+  padding:22px;
+  margin-top:25px;
+}
+
+.policy-box h4{
+  color:var(--gold-light);
+  margin-bottom:10px;
+  font-family:var(--serif);
+  font-size:24px;
+}
+
+.policy-box p{
+  font-size:13px;
+  margin-bottom:8px;
+}
+
+.booking-form{
+  background:#14120f;
+  border:1px solid var(--border);
+  padding:35px;
+}
+
+.booking-form h3{
+  font-size:32px;
+  margin-bottom:25px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{margin-bottom:18px}
+
+.field label{
+  display:block;
+  color:var(--gold-light);
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.field input,.field select,.field textarea{
+  width:100%;
+  background:#201d18;
+  border:1px solid var(--border);
+  color:#fffdf8;
+  padding:13px;
+  outline:none;
+  border-radius:0;
+}
+
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--gold);
+}
+
+.field select option{background:#201d18}
+
+.field textarea{
+  min-height:110px;
+  resize:vertical;
+}
+
+.form-disclaimer{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:15px;
+}
+
+/* PRIVATE ENQUIRIES */
+
+.private-box{
+  border:1px solid var(--border);
+  padding:35px;
+  margin-top:35px;
+  background:#171511;
+}
+
+.private-box h3{
+  color:var(--gold-light);
+  font-size:29px;
+  margin-bottom:12px;
+}
+
+.private-box p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* FAQ */
+
+.faq-list{
+  max-width:850px;
+  margin:35px auto 0;
+}
+
+.faq-item{
+  border-bottom:1px solid var(--border);
+  padding:22px 0;
+}
+
+.faq-item h3{
+  font-size:25px;
+  color:var(--gold-light);
+  margin-bottom:9px;
+}
+
+.faq-item p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* CONTACT */
+
+#contact{background:var(--dark)}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  max-width:850px;
+  margin:40px auto 0;
+}
+
+.contact-card{
+  border:1px solid var(--border);
+  background:#15130f;
+  padding:25px;
+  text-align:center;
+  transition:.25s;
+}
+
+.contact-card:hover{
+  border-color:var(--gold);
+  transform:translateY(-3px);
+}
+
+.contact-icon{
+  font-size:27px;
+  color:var(--gold-light);
+  margin-bottom:10px;
+}
+
+.contact-card h3{
+  font-size:25px;
+  margin-bottom:7px;
+}
+
+.contact-card p{
+  color:var(--muted);
+  font-size:13px;
+  overflow-wrap:anywhere;
+}
+
+.contact-card span{
+  display:inline-block;
+  color:var(--gold-light);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-top:12px;
+}
+
+.contact-note{
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:25px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0c0b09;
+  border-top:1px solid var(--border);
+  padding:45px 0 25px;
+  text-align:center;
+}
+
+.footer-brand{
+  font-family:var(--serif);
+  font-size:34px;
+  color:var(--gold-light);
+  margin-bottom:10px;
+}
+
+footer p{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:12px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin:20px 0;
+}
+
+.footer-links a{
+  color:var(--gold-light);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.copyright{
+  border-top:1px solid var(--border);
+  padding-top:20px;
+  margin-top:25px;
+}
+
+.floating-contact{
+  position:fixed;
+  bottom:20px;
+  right:18px;
+  z-index:900;
+  background:var(--gold);
+  color:#17130e;
+  padding:13px 18px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  box-shadow:0 5px 25px rgba(0,0,0,.4);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .nav-links{gap:13px}
+  .nav-links a{font-size:10px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.booking-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:680px){
+  .nav{min-height:72px}
+  .menu-toggle{display:block}
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;
+    right:0;
+    background:#14120f;
+    border-bottom:1px solid var(--border);
+    padding:20px 5%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+  }
+
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:12px}
+
+  .hero{min-height:590px;background-position:60% center}
+  .hero-content{padding:75px 0}
+  .hero h1{font-size:58px}
+
+  section{padding:75px 0}
+
+  .trust-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .services-grid{grid-template-columns:1fr}
+  .service-card p{min-height:auto}
+
+  .gallery-preview-card img{height:260px}
+
+  .form-row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .booking-form{padding:23px 18px}
+  .contact-grid{grid-template-columns:1fr}
+  .about-image img{height:350px}
+
+  .floating-contact{
+    bottom:12px;
+    right:12px;
+  }
+}
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L75BY405RZ"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-L75BY405RZ');
+</script>
 </head>
 
 <body>
@@ -848,15 +727,13 @@
       <small>MASSAGE & WELLNESS</small>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
-      ☰
-    </button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="#booking">Booking</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -872,11 +749,7 @@
 
       <div class="eyebrow">A moment of calm. A touch of luxury.</div>
 
-      <h1>
-        Relax.<br>
-        Restore.<br>
-        <span>Renew.</span>
-      </h1>
+      <h1>Relax.<br>Restore.<br><span>Renew.</span></h1>
 
       <p>
         Welcome to Kate Massage, where relaxation meets personalized care.
@@ -888,9 +761,7 @@
         <a href="#booking" class="btn btn-outline">Request an Appointment</a>
       </div>
 
-      <div class="hero-note">
-        Personal care · Relaxation · Wellness
-      </div>
+      <div class="hero-note">Personal care · Relaxation · Wellness</div>
 
     </div>
   </div>
@@ -900,20 +771,9 @@
 
 <div class="trust-strip">
   <div class="container trust-grid">
-    <div>
-      Personalized Care
-      <small>Experiences tailored to your enquiry</small>
-    </div>
-
-    <div>
-      Relaxation
-      <small>Make time for yourself</small>
-    </div>
-
-    <div>
-      Private Enquiries
-      <small>Respectful communication</small>
-    </div>
+    <div>Personalized Care<small>Experiences tailored to your enquiry</small></div>
+    <div>Relaxation<small>Make time for yourself</small></div>
+    <div>Private Enquiries<small>Respectful communication</small></div>
   </div>
 </div>
 
@@ -923,10 +783,7 @@
   <div class="container about-grid">
 
     <div class="about-image">
-      <img
-        src="E7449950-39EF-4625-8B96-4C083FD339B1.png"
-        alt="Kate Massage treatment room"
-      >
+      <img src="E7449950-39EF-4625-8B96-4C083FD339B1.png" alt="Kate Massage treatment room">
     </div>
 
     <div class="about-text">
@@ -976,70 +833,49 @@
       <div class="service-card">
         <div class="service-number">01 / RELAXATION</div>
         <h3>Relaxation Massage</h3>
-        <p>
-          A gentle massage experience intended to encourage relaxation
-          and provide a peaceful break from everyday demands.
-        </p>
+        <p>A gentle massage experience intended to encourage relaxation and provide a peaceful break from everyday demands.</p>
         <div class="price">$100 <small>USD</small></div>
       </div>
 
       <div class="service-card">
         <div class="service-number">02 / CLASSIC</div>
         <h3>Swedish Massage</h3>
-        <p>
-          A classic massage style using flowing techniques and varying
-          pressure according to individual comfort.
-        </p>
+        <p>A classic massage style using flowing techniques and varying pressure according to individual comfort.</p>
         <div class="price">$150 <small>USD</small></div>
       </div>
 
       <div class="service-card">
         <div class="service-number">03 / TARGETED</div>
         <h3>Deep Tissue Massage</h3>
-        <p>
-          A focused massage approach using firmer pressure where appropriate
-          and agreed upon with the client.
-        </p>
+        <p>A focused massage approach using firmer pressure where appropriate and agreed upon with the client.</p>
         <div class="price">$200 <small>USD</small></div>
       </div>
 
       <div class="service-card">
         <div class="service-number">04 / WARMTH</div>
         <h3>Hot Stone Massage</h3>
-        <p>
-          A warm-stone massage experience for clients who enjoy the
-          sensation of gentle warmth during their session.
-        </p>
+        <p>A warm-stone massage experience for clients who enjoy the sensation of gentle warmth during their session.</p>
         <div class="price">$250 <small>USD</small></div>
       </div>
 
       <div class="service-card">
         <div class="service-number">05 / FULL EXPERIENCE</div>
         <h3>Full Body Massage</h3>
-        <p>
-          A full-body massage experience with attention to comfort,
-          personal preferences and agreed treatment areas.
-        </p>
+        <p>A full-body massage experience with attention to comfort, personal preferences and agreed treatment areas.</p>
         <div class="price">$300 <small>USD</small></div>
       </div>
 
       <div class="service-card">
         <div class="service-number">06 / AROMATIC</div>
         <h3>Aromatherapy Massage</h3>
-        <p>
-          A massage experience incorporating aromatic oils, subject
-          to individual preferences and sensitivities.
-        </p>
+        <p>A massage experience incorporating aromatic oils, subject to individual preferences and sensitivities.</p>
         <div class="price">$350 <small>USD</small></div>
       </div>
 
       <div class="service-card">
         <div class="service-number">07 / SIGNATURE</div>
         <h3>Premium Signature Massage</h3>
-        <p>
-          A premium personalized experience. Contact us to discuss
-          the details and suitability of this service.
-        </p>
+        <p>A premium personalized experience. Contact us to discuss the details and suitability of this service.</p>
         <div class="price">$400 <small>USD</small></div>
       </div>
 
@@ -1047,7 +883,7 @@
 
     <p class="service-note">
       Prices are listed in US dollars. Please enquire about session duration,
-      availability and any relevant service details before booking.
+      availability and relevant service details before booking.
     </p>
 
   </div>
@@ -1072,37 +908,41 @@
   </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY PREVIEW -->
 
-<section id="gallery">
-  <div class="container">
+<section class="gallery-preview">
+  <div class="container center">
 
-    <div class="center">
-      <div class="eyebrow">A Look Inside</div>
-      <h2>The <span class="gold">Gallery</span></h2>
+    <div class="eyebrow">A Look Inside</div>
 
-      <p class="section-intro">
-        A glimpse into the Kate Massage experience.
-        More photographs will be added as the gallery grows.
-      </p>
-    </div>
+    <h2>Discover Our <span class="gold">Gallery</span></h2>
 
-    <div class="gallery-grid">
+    <p class="section-intro">
+      Take a closer look at the Kate Massage atmosphere and explore our photo collection.
+    </p>
+
+    <div class="gallery-preview-card">
 
       <img
         src="E7449950-39EF-4625-8B96-4C083FD339B1.png"
-        alt="Kate Massage room"
+        alt="Kate Massage gallery preview"
       >
 
-      <img src="IMG_2376.jpeg" alt="Kate Massage spa experience">
+      <div class="gallery-preview-caption">
+        <h3 style="font-family:var(--serif);font-size:30px;color:var(--gold-light)">
+          The Kate Massage Collection
+        </h3>
+
+        <p>
+          Explore our collection of photographs and discover more of the Kate Massage experience.
+        </p>
+
+        <a href="gallery.html" class="btn">Explore Our Gallery</a>
       </div>
 
-      <img src="IMG_2377.jpeg" alt="Kate Massage wellness experience">
-      </div>
+    </div>
 
-    </div><img src="IMG_2412.webp" alt="Kate Massage luxury spa experience">
-
-  </div><img src="IMG_2413.jpeg" alt="Kate Massage spa atmosphere">
+  </div>
 </section>
 
 <!-- BOOKING -->
@@ -1117,8 +957,8 @@
       <h2>Make Your <span class="gold">Enquiry</span></h2>
 
       <p>
-        Interested in booking? Complete the enquiry form and your
-        message will be prepared for you to send by text.
+        Interested in booking? Complete the enquiry form and your message
+        will be prepared for you to send by text.
       </p>
 
       <p>
@@ -1130,33 +970,15 @@
 
         <h4>Payment Policy</h4>
 
-        <p>
-          <strong class="gold">50% deposit:</strong>
-          A deposit equal to half of the service price is required
-          in advance to reserve an appointment.
-        </p>
+        <p><strong class="gold">50% deposit:</strong> A deposit equal to half of the service price is required in advance to reserve an appointment.</p>
 
-        <p>
-          <strong class="gold">Remaining balance:</strong>
-          The other half is due immediately after the service.
-        </p>
+        <p><strong class="gold">Remaining balance:</strong> The other half is due immediately after the service.</p>
 
-        <p>
-          An appointment is not confirmed until the deposit has
-          been received and acknowledged.
-        </p>
+        <p>An appointment is not confirmed until the deposit has been received and acknowledged.</p>
 
-        <p>
-          Please contact us first to confirm accepted payment methods
-          and receive payment instructions. Do not send payment
-          before receiving confirmation.
-        </p>
+        <p>Please contact us first to confirm accepted payment methods and receive payment instructions. Do not send payment before receiving confirmation.</p>
 
-        <p>
-          <strong class="gold">Example:</strong>
-          For a $200 service, the deposit is $100 and the remaining
-          balance is $100.
-        </p>
+        <p><strong class="gold">Example:</strong> For a $200 service, the deposit is $100 and the remaining balance is $100.</p>
 
       </div>
 
@@ -1167,7 +989,6 @@
       <h3>Appointment Request</h3>
 
       <div class="form-row">
-
         <div class="field">
           <label for="name">Full Name</label>
           <input type="text" id="name" required placeholder="Your name">
@@ -1177,7 +998,6 @@
           <label for="phone">Phone Number</label>
           <input type="tel" id="phone" required placeholder="Your phone number">
         </div>
-
       </div>
 
       <div class="field">
@@ -1196,7 +1016,6 @@
       </div>
 
       <div class="form-row">
-
         <div class="field">
           <label for="date">Preferred Date</label>
           <input type="date" id="date" required>
@@ -1206,7 +1025,6 @@
           <label for="time">Preferred Time</label>
           <input type="time" id="time" required>
         </div>
-
       </div>
 
       <div class="field">
@@ -1219,9 +1037,9 @@
       </button>
 
       <p class="form-disclaimer">
-        This form prepares a text message on your device. You must
-        press Send in your messaging app. Submitting this form does
-        not automatically confirm an appointment or process payment.
+        This form prepares a text message on your device. You must press Send
+        in your messaging app. Submitting this form does not automatically
+        confirm an appointment or process payment.
       </p>
 
     </form>
@@ -1229,7 +1047,6 @@
   </div>
 
   <div class="container">
-
     <div class="private-box">
 
       <h3>Private Wellness Enquiries</h3>
@@ -1243,7 +1060,6 @@
       </p>
 
     </div>
-
   </div>
 </section>
 
@@ -1261,46 +1077,30 @@
 
       <div class="faq-item">
         <h3>How do I book an appointment?</h3>
-        <p>
-          Complete the appointment enquiry form or contact us directly.
-          Your appointment must be confirmed with us before it is reserved.
-        </p>
+        <p>Complete the appointment enquiry form or contact us directly. Your appointment must be confirmed with us before it is reserved.</p>
       </div>
 
       <div class="faq-item">
         <h3>Is a deposit required?</h3>
-        <p>
-          Yes. A 50% deposit is required in advance to reserve an appointment.
-          The remaining balance is due immediately after the service.
-        </p>
+        <p>Yes. A 50% deposit is required in advance to reserve an appointment. The remaining balance is due immediately after the service.</p>
       </div>
 
       <div class="faq-item">
         <h3>How do I make a payment?</h3>
-        <p>
-          Contact us first to confirm accepted payment methods and receive
-          payment instructions. Do not send payment before confirmation.
-        </p>
+        <p>Contact us first to confirm accepted payment methods and receive payment instructions. Do not send payment before confirmation.</p>
       </div>
 
       <div class="faq-item">
         <h3>Can I ask questions before booking?</h3>
-        <p>
-          Absolutely. You are welcome to contact us with questions about
-          services, pricing, appointment arrangements and suitability.
-        </p>
+        <p>Absolutely. You are welcome to contact us with questions about services, pricing, appointment arrangements and suitability.</p>
       </div>
 
       <div class="faq-item">
         <h3>Will my appointment be confirmed immediately?</h3>
-        <p>
-          No. Sending an enquiry does not automatically confirm an appointment.
-          We will communicate with you to confirm availability and the deposit.
-        </p>
+        <p>No. Sending an enquiry does not automatically confirm an appointment. We will communicate with you to confirm availability and the deposit.</p>
       </div>
 
     </div>
-
   </div>
 </section>
 
@@ -1362,7 +1162,6 @@
 <!-- FOOTER -->
 
 <footer>
-
   <div class="container">
 
     <div class="footer-brand">Kate Massage</div>
@@ -1372,86 +1171,77 @@
     <div class="footer-links">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
+      <a href="gallery.html">Gallery</a>
       <a href="#booking">Booking</a>
       <a href="#contact">Contact</a>
     </div>
 
-    <p>
-      Please contact us to confirm service details, availability
-      and appointment arrangements.
-    </p>
+    <p>Please contact us to confirm service details, availability and appointment arrangements.</p>
 
     <p class="copyright">
       © <span id="year"></span> Kate Massage. All rights reserved.
     </p>
 
   </div>
-
 </footer>
 
 <a href="#booking" class="floating-contact">Book Now</a>
 
 <script>
-  // Mobile navigation
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
 
-  menuToggle.addEventListener('click', function() {
-    const isOpen = navLinks.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', isOpen);
-    menuToggle.textContent = isOpen ? '×' : '☰';
+menuToggle.addEventListener('click',function(){
+  const isOpen=navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded',isOpen);
+  menuToggle.textContent=isOpen?'×':'☰';
+});
+
+document.querySelectorAll('.nav-links a').forEach(function(link){
+  link.addEventListener('click',function(){
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+    menuToggle.textContent='☰';
   });
+});
 
-  // Close mobile menu after selecting a link
-  document.querySelectorAll('.nav-links a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      navLinks.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.textContent = '☰';
-    });
-  });
+document.getElementById('year').textContent=new Date().getFullYear();
 
-  // Set footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+const dateInput=document.getElementById('date');
+const today=new Date();
+const localToday=new Date(
+  today.getTime()-today.getTimezoneOffset()*60000
+).toISOString().split('T')[0];
 
-  // Prevent selecting a date in the past
-  const dateInput = document.getElementById('date');
-  const today = new Date();
-  const localToday = new Date(
-    today.getTime() - today.getTimezoneOffset() * 60000
-  ).toISOString().split('T')[0];
+dateInput.min=localToday;
 
-  dateInput.min = localToday;
+document.getElementById('bookingForm').addEventListener('submit',function(event){
+  event.preventDefault();
 
-  // Prepare booking enquiry as a text message
-  document.getElementById('bookingForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const service=document.getElementById('service').value;
+  const date=document.getElementById('date').value;
+  const time=document.getElementById('time').value;
+  const message=document.getElementById('message').value.trim();
 
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const service = document.getElementById('service').value;
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const message = document.getElementById('message').value.trim();
+  if(!name||!phone||!service||!date||!time){
+    alert('Please complete all required fields.');
+    return;
+  }
 
-    if (!name || !phone || !service || !date || !time) {
-      alert('Please complete all required fields.');
-      return;
-    }
+  const bookingMessage=
+    "Hello Kate Massage, I would like to make an appointment enquiry.\n\n"+
+    "Name: "+name+"\n"+
+    "Phone: "+phone+"\n"+
+    "Service: "+service+"\n"+
+    "Preferred date: "+date+"\n"+
+    "Preferred time: "+time+"\n"+
+    "Additional message: "+(message||"None")+"\n\n"+
+    "Please let me know about availability and booking arrangements.";
 
-    const bookingMessage =
-      "Hello Kate Massage, I would like to make an appointment enquiry.\n\n" +
-      "Name: " + name + "\n" +
-      "Phone: " + phone + "\n" +
-      "Service: " + service + "\n" +
-      "Preferred date: " + date + "\n" +
-      "Preferred time: " + time + "\n" +
-      "Additional message: " + (message || "None") + "\n\n" +
-      "Please let me know about availability and booking arrangements.";
-
-    window.location.href =
-      "sms:+18653752664?body=" + encodeURIComponent(bookingMessage);
-  });
+  window.location.href="sms:+18653752664?body="+encodeURIComponent(bookingMessage);
+});
 </script>
 
 </body>
